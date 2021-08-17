@@ -1,0 +1,16 @@
+supported_clients:
+  - uoserver
+  - storage
+
+uoserver:
+  client_id: uoserver
+  client_secret: "85fbca0c-6ae8-4cb7-8d41-41ef2e2ee9de"
+  url: "https://uoserver.nyc01.cuspuo.org"
+  #url: http://localhost:8000
+storage:
+  client_id: storage
+  client_secret: "ec932e1d-b602-4736-8518-9ce3678319b2"
+  url: "https://api.storage01.nyc01.cuspuo.org"
+  ui: "https://storage01.nyc01.cuspuo.org"
+auth_server:
+  url: "https://identity.nyc01.cuspuo.org"
