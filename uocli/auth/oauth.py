@@ -10,8 +10,7 @@ import requests
 import time
 import json
 
-#HAS_GUI = 'DISPLAY' in os.environ
-HAS_GUI = True if sys.platform == 'win32' else os.environ['DISPLAY']
+HAS_GUI = True if (sys.platform == 'win32' or 'DISPLAY' in os.environ) else False
 SUPPORTED_CLIENTS = config['supported_clients']
 AUTH_SERVER_URL = config['auth_server']['url']
 

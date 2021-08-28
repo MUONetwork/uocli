@@ -59,7 +59,8 @@ def assumed_session(session=None,
 
     def refresh(username=None, password=None,
                 client_id=None, client_secret=None):
-        oauth = OAuth(client_id=client_id, client_secret=client_secret)
+        oauth = OAuth(client_id=client_id, client_secret=client_secret,
+                      username=username, password=password)
         access_token = oauth.get_tokens()["access_token"]
 
         sts_client = session.client('sts',
