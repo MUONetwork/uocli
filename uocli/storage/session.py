@@ -49,7 +49,8 @@ def assumed_session(session=None,
     session: boto3.session
     """
     if username is None:
-        username = os.environ["USER"]
+        username = getpass.getuser()
+        username = input("Enter your username") if username == "jovyan" else username
     if password is None and 'DISPLAY' not in os.environ:
         password = getpass.getpass(f"Enter the password for {username}: ")
 
